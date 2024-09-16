@@ -1,0 +1,70 @@
+/* 全体のスタイル */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/job-hunting-background.png') no-repeat center center/cover;
+    font-family: Arial, sans-serif;
+    transition: opacity 1s ease-in-out;
+}
+
+.start-screen {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-text {
+    opacity: 0;
+    color: #fff;
+    font-size: 5rem;  /* 初期のタイトルサイズ */
+    font-family: 'Roboto', sans-serif;
+    transition: opacity 2s ease-in-out;
+    margin-bottom: 20px;
+}
+
+#quote-text {
+    opacity: 0;
+    color: #fff;
+    font-size: 1.8rem;
+    font-family: 'Cinzel', serif;
+    margin-top: 0;
+    transition: opacity 2s ease-in-out;
+    text-align: center;
+    width: 80%;
+}
+
+/* モバイルビューのためのメディアクエリ */
+@media (max-width: 768px) {
+    #welcome-text {
+        font-size: 3rem;  /* モバイルでのタイトルサイズ */
+    }
+
+    #quote-text {
+        font-size: 1.2rem;  /* モバイルでのサブタイトルサイズ */
+    }
+}
+
+/* フェードアウトのためのスタイル */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
