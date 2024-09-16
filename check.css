@@ -86,7 +86,30 @@ button:hover {
 }
 
 .benefits-list input[type="checkbox"] {
+  -webkit-appearance: none; /* Safari用 */
+  appearance: none;
+  width: 16px; /* チェックボックスの幅 */
+  height: 16px; /* チェックボックスの高さ */
+  border: 1px solid #00796b;
+  border-radius: 4px; /* 丸みを加える */
+  background-color: #ffffff;
   margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* チェックされた時のスタイル */
+.benefits-list input[type="checkbox"]:checked {
+  background-color: #00796b;
+}
+
+.benefits-list input[type="checkbox"]:checked::after {
+  content: '✔'; /* チェックマークを表示 */
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 2px;
 }
 
 /* 結果表示エリアのスタイル */
@@ -111,4 +134,20 @@ button:hover {
 
 .home-button:hover {
   background-color: #004d40;
+}
+
+/* モバイルデバイス用のスタイル */
+@media (max-width: 768px) {
+  .benefits-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* カラムの最小幅を縮小 */
+  }
+
+  .benefits-list input[type="checkbox"] {
+    width: 20px; /* モバイル用にチェックボックスのサイズを適切に設定 */
+    height: 20px;
+  }
+
+  .benefits-list label {
+    font-size: 14px; /* モバイル用にテキストサイズを調整 */
+  }
 }
