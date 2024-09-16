@@ -1,0 +1,236 @@
+/* 背景に薄い緑色を設定 */
+body {
+  background-color: #e0f7e0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.goal-container {
+  margin-bottom: 3px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 97%;
+  padding: 10px;
+  border: 1px solid #b0bec5;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+/* ボタンのスタイル */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #135e55;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 32%;
+}
+
+button:hover {
+  background-color: #208e7b;
+}
+
+/* カレンダーのスタイル */
+.calendar-container {
+  margin-bottom: 10px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#calendar-title {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.calendar-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.calendar-controls button {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+}
+
+#calendar {
+  width: 100%;
+  border: 1px solid #b0bec5;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+.days-row, .calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.days-row span {
+  font-weight: bold;
+}
+
+/* 日曜日は赤、土曜日は青 */
+.calendar-grid .sunday {
+  color: red;
+}
+
+.calendar-grid .saturday {
+  color: blue;
+}
+
+.calendar-grid div {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  height: 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* プレビューのスタイル */
+.preview {
+  width: 100%;
+  max-height: 40px;
+  overflow: hidden;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.preview p {
+  font-size: 0.7rem;
+  color: #757575;
+  margin: 2px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 今日の日付を強調するスタイル */
+.today {
+  background-color: #b0c4de;
+  border: 2px solid #888;
+}
+
+/* モーダルウィンドウのスタイル */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  height: auto;
+  min-width: 300px;
+  max-width: 500px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#close-modal {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#close-modal:hover,
+#close-modal:focus {
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#modal-title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+#schedule-list {
+  margin: 10px 0;
+}
+
+/* スケジュール項目のスタイル */
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* ボタンを横に並べるグループ */
+.button-group {
+  display: flex;
+  gap: 5px; /* ボタン間のスペース */
+}
+
+/* スケジュール項目内の小さいボタンスタイル */
+.schedule-item button {
+  background-color: #135e55;
+  color: white;
+  padding: 3px 8px; /* ボタンを小さく */
+  font-size: 0.8rem; /* ボタンの文字を小さく */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.schedule-item button:hover {
+  background-color: #208e7b;
+}
+
+#add-schedule {
+  background-color: #135e55;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-schedule:hover {
+  background-color: #208e7b;
+}
