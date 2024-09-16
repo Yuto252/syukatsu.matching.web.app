@@ -1,0 +1,160 @@
+/* 全体のコンテナのスタイル */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* タイトルのスタイル */
+h1 {
+    text-align: center;
+    color: #00796b;
+}
+
+/* テーブルのスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #00796b;
+    color: white;
+}
+
+/* ボタンのスタイル */
+button {
+    background-color: #00796b;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+/* ホームボタンのスタイル */
+.home-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: #00796b;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.home-button:hover {
+    background-color: #004d40;
+}
+
+/* モーダルウィンドウのスタイル */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 背景を少し暗く */
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* シャドウを追加 */
+    overflow-y: auto;
+    max-height: 90vh;
+    animation: fadeIn 0.5s; /* フェードインアニメーション */
+}
+
+/* モーダルのタイトル */
+.modal-content h3 {
+    color: #00796b;
+    font-size: 24px;
+    border-bottom: 2px solid #00796b;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* マッチ情報のスタイル */
+.match-info {
+    font-size: 16px;
+    color: #004d40;
+    margin-left: 10px;
+}
+
+/* モーダルの詳細情報セクション */
+.details-section {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.details-section p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.details-section p strong {
+    font-weight: bold;
+    color: #00796b;
+}
+
+/* メモセクションのスタイル */
+.memo-section {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid #ccc; /* メモ欄の上に区切り線を追加 */
+}
+
+.memo-section h4 {
+    color: #00796b;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* モーダルの閉じるボタン */
+.close {
+    color: #00796b;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #004d40;
+}
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
