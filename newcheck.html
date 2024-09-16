@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>企業情報入力</title>
+  <link rel="stylesheet" href="newcheck.css">
+</head>
+<body>
+  <div class="container">
+    <a href="home.html" class="home-button">ホームへ戻る</a>
+    <h1>企業情報入力</h1>
+    
+    <form id="company-info-form">
+      <!-- 企業名と担当者氏名の入力欄 -->
+      <div class="form-section">
+        <label for="company-name">企業名</label>
+        <input type="text" id="company-name" name="company-name" required>
+      </div>
+      <div class="form-section">
+        <label for="contact-person">担当者氏名</label>
+        <input type="text" id="contact-person" name="contact-person" required>
+      </div>
+
+      <!-- その他の企業情報の入力欄 -->
+      <div class="form-section">
+        <label for="industry">業種</label>
+        <select id="industry" name="industry" required>
+          <option value="">業種を選択</option>
+          <option value="IT">IT</option>
+          <option value="メーカー">メーカー</option>
+          <option value="製造業">製造業</option>
+          <option value="サービス業">サービス業</option>
+          <option value="医療・福祉">医療・福祉</option>
+          <option value="教育">教育</option>
+          <option value="金融">金融</option>
+          <option value="不動産">不動産</option>
+          <option value="小売">小売</option>
+          <option value="建設">建設</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+
+      <!-- 勤務地の地方選択 -->
+      <div class="form-section">
+        <label for="region">勤務地</label>
+        <select id="region" name="region">
+          <option value="">地方を選択</option>
+          <option value="hokkaido">北海道地方</option>
+          <option value="tohoku">東北地方</option>
+          <option value="kanto">関東地方</option>
+          <option value="chubu">中部地方</option>
+          <option value="kinki">近畿地方</option>
+          <option value="chugoku">中国地方</option>
+          <option value="shikoku">四国地方</option>
+          <option value="kyushu">九州地方</option>
+        </select>
+      </div>
+
+      <!-- 勤務地のチェックリスト -->
+      <div class="form-section">
+        <label>都道府県</label>
+        <div id="work-location" class="benefits-list">
+          <!-- JavaScriptで都道府県を生成します -->
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label for="listing-status">上場の有無</label>
+        <select id="listing-status" name="listing-status" required>
+          <option value="listed">上場</option>
+          <option value="unlisted">非上場</option>
+        </select>
+      </div>
+      
+
+      <div class="form-section">
+        <label for="salary">年収</label>
+        <select id="salary" name="salary" required>
+          <option value="">年収を選択</option>
+          <option value="100">100万円台</option>
+          <option value="200">200万円台</option>
+          <option value="300">300万円台</option>
+          <option value="400">400万円台</option>
+          <option value="500">500万円台</option>
+          <option value="600">600万円台</option>
+          <option value="700">700万円台</option>
+          <option value="800">800万円台</option>
+          <option value="900">900万円台</option>
+          <option value="1000">1000万円以上</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="company-size">会社の規模</label>
+        <select id="company-size" name="company-size" required>
+          <option value="">会社の規模を選択</option>
+          <option value="small">小規模（1-50人）</option>
+          <option value="medium-small">中小規模（51-200人）</option>
+          <option value="medium">中規模（201-500人）</option>
+          <option value="large">大規模（501-1000人）</option>
+          <option value="very-large">超大規模（1000人以上）</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="remote">リモートワーク可否</label>
+        <select id="remote" name="remote" required>
+          <option value="">リモートワーク可否を選択</option>
+          <option value="full">フルリモート</option>
+          <option value="part">週に2〜3日リモート</option>
+          <option value="none">リモートなし</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="overtime">平均残業時間</label>
+        <select id="overtime" name="overtime" required>
+          <option value="">平均残業時間を選択</option>
+          <option value="under-10">10時間未満</option>
+          <option value="10-15">10時間以上15時間未満</option>
+          <option value="15-20">15時間以上20時間未満</option>
+          <option value="20-25">20時間以上25時間未満</option>
+          <option value="25-30">25時間以上30時間未満</option>
+          <option value="35-40">35時間以上40時間未満</option>
+          <option value="40-over">40時間以上</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="annual-holidays">年間休日の数</label>
+        <select id="annual-holidays" name="annual-holidays" required>
+          <option value="">年間休日を選択</option>
+          <option value="under-120">120日未満</option>
+          <option value="120-over">120日以上</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="paid-leave">有給取得率</label>
+        <select id="paid-leave" name="paid-leave" required>
+          <option value="">有給取得率を選択</option>
+          <option value="10">10%</option>
+          <option value="20">20%</option>
+          <option value="30">30%</option>
+          <option value="40">40%</option>
+          <option value="50">50%</option>
+          <option value="60">60%</option>
+          <option value="70">70%</option>
+          <option value="80">80%</option>
+          <option value="90">90%</option>
+          <option value="100">100%</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="transfer">転勤の有無</label>
+        <select id="transfer" name="transfer" required>
+          <option value="yes">あり</option>
+          <option value="no">なし</option>
+        </select>
+      </div>
+      
+      <div class="form-section">
+        <label for="side-job">副業の可否</label>
+        <select id="side-job" name="side-job" required>
+          <option value="allowed">可</option>
+          <option value="not-allowed">不可</option>
+        </select>
+      </div>
+      
+
+      <!-- 福利厚生のセクション -->
+      <div class="form-section">
+        <label>福利厚生</label>
+        <div id="benefits" class="benefits-list">
+          <label><input type="checkbox" value="交通費支給">交通費支給</label>
+          <label><input type="checkbox" value="社会保険完備">社会保険完備</label>
+          <label><input type="checkbox" value="健康診断">健康診断</label>
+          <label><input type="checkbox" value="住宅手当">住宅手当</label>
+          <label><input type="checkbox" value="家族手当">家族手当</label>
+          <label><input type="checkbox" value="退職金制度">退職金制度</label>
+          <label><input type="checkbox" value="リモートワーク可">リモートワーク可</label>
+          <label><input type="checkbox" value="研修制度">研修制度の充実</label>
+          <label><input type="checkbox" value="福利厚生施設利用可">福利厚生施設利用可</label>
+          <label><input type="checkbox" value="社内イベント">社内イベント</label>
+          <label><input type="checkbox" value="食堂・昼食補助">食堂・昼食補助</label>
+        </div>
+      </div>
+
+      <!-- メモの入力欄 -->
+      <div class="form-section">
+        <label for="memo">メモ</label>
+        <textarea id="memo" name="memo" rows="4" placeholder="メモを記入してください..."></textarea>
+      </div>
+
+      <button type="submit">企業情報を保存</button>
+    </form>
+
+    <!-- モーダルウィンドウ -->
+    <div id="match-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>企業マッチング結果</h3>
+        <div id="match-result"></div>
+      </div>
+    </div>
+
+    <div id="result-area"></div>
+  </div>
+
+  <script src="companyMatch.js"></script>
+</body>
+</html>
