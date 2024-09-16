@@ -80,8 +80,8 @@ button:hover {
 }
 
 .benefits-list label {
-  display: flex;
-  align-items: center;
+  display: flex; /* チェックボックスとテキストを横並びに */
+  align-items: center; /* チェックボックスとテキストを縦方向に中央揃え */
   white-space: normal; /* テキストを折り返す */
   word-break: break-word;
 }
@@ -140,7 +140,7 @@ button:hover {
 /* レスポンシブデザイン：モバイルデバイス用のスタイル */
 @media (max-width: 768px) {
   .benefits-list {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* モバイル用にカラムの最小幅を調整 */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* モバイル用にカラムの最小幅を調整 */
   }
 
   .benefits-list input[type="checkbox"] {
@@ -150,5 +150,6 @@ button:hover {
 
   .benefits-list label {
     font-size: 14px; /* モバイル用にテキストサイズを調整 */
+    justify-content: flex-start; /* 左寄せ */
   }
 }
