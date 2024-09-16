@@ -4,7 +4,7 @@ body {
   background-color: #e0f7fa;
   margin: 0;
   padding: 20px;
-  line-height: 1.6; /* 行間を少し広げて読みやすく */
+  line-height: 1.6;
 }
 
 .container {
@@ -22,21 +22,21 @@ h1 {
 }
 
 .form-section {
-  margin-bottom: 20px; /* セクション間の余白を少し広げる */
+  margin-bottom: 20px;
 }
 
 label {
-  display: block; /* ラベルをブロック要素にして縦に並べる */
+  display: block;
   font-weight: bold;
-  margin-bottom: 5px; /* ラベルとインプット間のスペースを広げる */
+  margin-bottom: 5px;
   color: black;
-  text-align: left; /* 左端にラベルを揃える */
-  padding-left: 10px; /* 左側に余白を追加 */
+  text-align: left;
+  padding-left: 10px;
 }
 
 input, select, textarea {
-  width: 100%; /* 全ての入力要素の幅を100%に統一 */
-  max-width: 800px; /* フォーム全体の最大幅を統一 */
+  width: 100%;
+  max-width: 800px;
   padding: 10px;
   margin-top: 8px;
   border: 1px solid #b0bec5;
@@ -53,7 +53,7 @@ textarea {
 button {
   background-color: #00796b;
   color: white;
-  padding: 12px; /* ボタンのパディングを少し増やす */
+  padding: 12px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -70,29 +70,29 @@ button:hover {
 /* 福利厚生のチェックリスト */
 .benefits-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 各項目の最小幅を調整 */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* グリッドの最小幅を設定 */
   gap: 15px;
   border: 1px solid #b2dfdb;
   padding: 15px;
   background-color: #e0f2f1;
   border-radius: 4px;
-  justify-items: start; /* 左寄せ */
+  justify-items: start;
 }
 
 .benefits-list label {
   display: flex;
   align-items: center;
   white-space: normal; /* テキストを折り返す */
-  word-break: break-word; /* 長い単語を折り返す */
+  word-break: break-word;
 }
 
 .benefits-list input[type="checkbox"] {
-  -webkit-appearance: none; /* Safari用 */
+  -webkit-appearance: none;
   appearance: none;
-  width: 16px; /* チェックボックスの幅 */
-  height: 16px; /* チェックボックスの高さ */
+  width: 16px;
+  height: 16px;
   border: 1px solid #00796b;
-  border-radius: 4px; /* 丸みを加える */
+  border-radius: 4px;
   background-color: #ffffff;
   margin-right: 10px;
   cursor: pointer;
@@ -105,7 +105,7 @@ button:hover {
 }
 
 .benefits-list input[type="checkbox"]:checked::after {
-  content: '✔'; /* チェックマークを表示 */
+  content: '✔';
   color: white;
   font-size: 12px;
   position: absolute;
@@ -137,10 +137,10 @@ button:hover {
   background-color: #004d40;
 }
 
-/* モバイルデバイス用のスタイル */
+/* レスポンシブデザイン：モバイルデバイス用のスタイル */
 @media (max-width: 768px) {
   .benefits-list {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* モバイル用にカラムの最小幅を調整 */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* モバイル用にカラムの最小幅を調整 */
   }
 
   .benefits-list input[type="checkbox"] {
