@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>企業情報リスト</title>
+  <link rel="stylesheet" href="list.css">
+</head>
+<body>
+  <div class="container">
+    <a href="home.html" class="home-button">ホームへ戻る</a>
+    <h1>登録企業情報</h1>
+
+    <table id="company-list-table">
+      <thead>
+        <tr>
+          <th>企業名 <button id="sort-name">▲▼</button></th>
+          <th>志望度 <button id="sort-desirability">▲▼</button></th>
+          <th>詳細</th>
+        </tr>
+      </thead>
+      <tbody id="company-list">
+        <!-- JavaScriptで企業情報を挿入 -->
+      </tbody>
+    </table>
+
+    <!-- モーダルウィンドウの構造 -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-details"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="list.js"></script>
+</body>
+</html>
