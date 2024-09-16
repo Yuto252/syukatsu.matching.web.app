@@ -1,0 +1,184 @@
+/* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6; /* 行間を少し広げて読みやすく */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #00796b;
+}
+
+.form-section {
+  margin-bottom: 20px; /* セクション間の余白を少し広げる */
+}
+
+label {
+  display: block; /* ラベルをブロック要素にして縦に並べる */
+  font-weight: bold;
+  margin-bottom: 5px; /* ラベルとインプット間のスペースを広げる */
+  color: black;
+  text-align: left; /* 左端にラベルを揃える */
+  padding-left: 10px; /* 左側に余白を追加 */
+}
+
+input, select, textarea {
+  width: 100%; /* 全ての入力要素の幅を100%に統一 */
+  max-width: 800px; /* フォーム全体の最大幅を統一 */
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #b0bec5;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+textarea {
+  resize: vertical;
+  height: 200px;
+}
+
+/* ボタンのスタイル */
+button {
+  background-color: #00796b;
+  color: white;
+  padding: 12px; /* ボタンのパディングを少し増やす */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+/* 福利厚生のチェックリスト */
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 各項目の最小幅を広げる */
+  gap: 15px;
+  border: 1px solid #b2dfdb;
+  padding: 15px;
+  background-color: #e0f2f1;
+  border-radius: 4px;
+  justify-items: start; /* 左寄せ */
+}
+
+.benefits-list label {
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* テキストを折り返さない */
+}
+
+.benefits-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* 結果表示エリアのスタイル */
+#result-area {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e0f2f1;
+  border-radius: 8px;
+  border: 1px solid #00796b;
+}
+
+.home-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: #00796b;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.home-button:hover {
+  background-color: #004d40;
+}
+
+/* モーダルの初期状態 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* 背景を少し暗く */
+  animation: fadeIn 0.5s;
+}
+
+/* モーダルのコンテンツ部分 */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* シャドウを追加 */
+  animation: slideDown 0.5s;
+  text-align: center; /* テキストを中央揃え */
+}
+
+/* モーダル内のタイトル */
+.modal-content h3 {
+  color: #00796b;
+  font-size: 24px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #00796b;
+  padding-bottom: 10px;
+}
+
+/* モーダル内のテキスト */
+.modal-content p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+/* 閉じるボタン */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close:hover, .close:focus {
+  color: #00796b;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* スライドダウンアニメーション */
+@keyframes slideDown {
+  from {transform: translateY(-50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
